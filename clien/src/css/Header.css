@@ -1,0 +1,27 @@
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #005f4f; /* Dark green color */
+    padding: 5px 20px;
+    font-size: 14px;
+   
+  }
+  
+  .contact-info span {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin-left: 10px;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+  }
+  

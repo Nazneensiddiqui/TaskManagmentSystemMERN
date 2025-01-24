@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+/* Main Navbar */
+  .main-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #008070; 
+    padding: 15px 20px;
+    color: white;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+  }
+  
+  .me-auto {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: 200px;
+    color: white;
+  }
+  
+  .me-auto link {
+    color: white;
+  }
+  
+ 
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
