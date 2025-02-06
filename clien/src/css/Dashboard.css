@@ -14,8 +14,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 100px;
-    width: 500px;
+    padding-top: 500px;
+    width: 600px;
   }
   
   .sidebar .nav-link {
@@ -30,15 +30,15 @@
   
   .content {
     margin-left: 230px;
-    padding: 60px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     background-color: #f7e8c1 ;
     height: 100vh;
     /* overflow-y: auto; */
   }
   
-  .content-area {
+  /* .content-area {
     margin-bottom: 80px;
-  }
+  } */
   
   .scrollable-content {
     height: 500px;
@@ -56,8 +56,9 @@
   @media (max-width: 768px) {
     .sidebar {
       position: relative;
-      height: auto;
+      /* height: auto; */
       padding-top: 20px;
+      display: none;
     }
     
     .content {

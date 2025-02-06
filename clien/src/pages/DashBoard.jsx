@@ -3,33 +3,27 @@ import { Container, Row, Col, Nav, Navbar } from 'react-bootstrap';
 import "../css/Dashboard.css"
 import {Link , Outlet} from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
-import Footer from '../component/Footer';
+
 
 import { GrDashboard } from "react-icons/gr";
-import { ImInsertTemplate } from "react-icons/im";
-import { BsPcDisplayHorizontal } from "react-icons/bs";
-import { GrDocumentUpdate } from "react-icons/gr";
-import { TbWorldSearch } from "react-icons/tb";
+import { FaUsersGear } from "react-icons/fa6";
+import { TbFileReport } from "react-icons/tb";
+import { MdOutlineContentPasteGo } from "react-icons/md";
+import { IoMdNotifications } from "react-icons/io";
+import { FiSettings } from "react-icons/fi";
+
 import { GrUserAdmin } from "react-icons/gr";
-import Header from '../component/Header';
-import TopNavbar from '../component/Topnavbar';
+
 
 
 
 const Dashboard=()=> {
   const[username , setUsername]=useState("")
-  const [useremail , setUseremail]=useState("")
+
 const navigate=useNavigate()
 
 useEffect(()=>{
-  if(localStorage.getItem("username" == null))
-  {
-    navigate("/home")
-  }
-  else{
-    setUsername(localStorage.getItem("username"))
-    setUseremail(localStorage.getItem("useremail"))
-  }
+setUsername(localStorage.getItem("username"))
 },[])
 
 
@@ -43,8 +37,7 @@ useEffect(()=>{
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ml-auto" style={{marginLeft:"350px"}}>
-            {/* <Nav.Link href="#"><img src={logo} width={40} height={30}/></Nav.Link> */}
-            <Nav.Link href="#" onClick={()=>{navigate("/loginpage")}}>Logout</Nav.Link>
+          <Nav.Link href="#" onClick={()=>{navigate("/loginpage")}}>Logout</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -54,22 +47,21 @@ useEffect(()=>{
           {/* Sidebar */}
           <Col md={2} className="sidebar">
             <Nav defaultActiveKey="/" className="flex-column">
-              <Nav.Link as={Link} to="/dashborad"><GrDashboard/>   Dashboard</Nav.Link>
-              <Nav.Link as={Link} to="insert"><ImInsertTemplate />  Insert</Nav.Link>
-              <Nav.Link as={Link} to="display"> <BsPcDisplayHorizontal/>   Display</Nav.Link>
-              <Nav.Link as={Link} to="update"><GrDocumentUpdate/>   Update</Nav.Link>
-              <Nav.Link as={Link} to="search"><TbWorldSearch/>    Search</Nav.Link>
-            </Nav>
+              <Nav.Link as={Link} to="#"><GrDashboard/>   Dashboard</Nav.Link>
+              <Nav.Link as={Link} to="create employee"><FaUsersGear/>  Create Employee</Nav.Link>
+              <Nav.Link as={Link} to="assign task"><TbFileReport/>    Assign Task</Nav.Link>
+              <Nav.Link as={Link} to="empreport"><span><MdOutlineContentPasteGo/>   Employee Report</span></Nav.Link>
+              <Nav.Link as={Link} to="resetpass"><span> Reset-password</span></Nav.Link>
+              </Nav>
           </Col> 
 
-          <Header/>
-          <TopNavbar/>
+        
        
 
           {/* Main Content */}
           <Col md={10} className="content">
             <div className="content-area">
-              <p align="center" style={{color:" #6b4b3a"}}>Welcome to the Admin Dashboard <Link to="reset">Reset-password</Link>               
+              <p align="center" style={{color:" #6b4b3a"}}>Welcome to the {username}               
              </p>
               {/* Example scrollable content */}
              
@@ -77,7 +69,7 @@ useEffect(()=>{
              
                 <Outlet/>
           </div>
-               <Footer/>
+            
           
             </div>
           </Col>

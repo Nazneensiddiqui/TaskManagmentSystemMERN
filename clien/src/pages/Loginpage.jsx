@@ -11,24 +11,27 @@ import axios from "axios"
 import {useNavigate} from "react-router-dom"
 
 const LoginPage = () => {
-const[admin, setAdmin]=useState("") 
+const[userid, setUserId]=useState("") 
 const[password, setPassword]=useState("")
 const[userType , setUsertype]=useState("")
 //console.log(admin, password, empType)
-
 const navigate=useNavigate()
 
-const handleSubmit=async()=>{
 
+
+const handleSubmit=async()=>{
+//..........Agar login Admin kare to
 if(userType=="admin")
 {
   try {
-    let api="http://localhost:8080/admin/adminlogin";
-    const response= await axios.post(api , {admin:admin, password:password})
+    let api="http://localhost:8000/admin/adminlogin";
+    const response= await axios.post(api , {userid:userid, password:password})
     console.log(response.data)
 
     if(response.status==200)
     {
+      localStorage.setItem("username", response.data.name)
+      localStorage.setItem("userid", response.data.userid)
       message.success("Login SuccesFully!!!")
  
     }
@@ -37,10 +40,27 @@ if(userType=="admin")
     message.error(error.response.data.msg)
   }
 }
-
-
+//...........login Employee kare.............
+else if(userType=="employee")
+{
+try {
+  let api="http://localhost:8000/employee/employeelogin";
+  const response= await axios.post(api , {userid:userid, password:password})
+  console.log(response.data)
+  if(response.status==200)
+  {
+    localStorage.setItem("empname" , response.data.empname)
+    localStorage.setItem("empemail", response.data.email)
+    localStorage.setItem("empid", response.data._id)
+      message.success("Login SuccesFully!!!")
+      navigate("/empdashborad")
+  }
+ 
+} catch (error) {
+  message.error(error.response.data.msg)
 }
-
+}
+}
 
 return (
     <div className="login-wrapper">
@@ -57,7 +77,7 @@ return (
           </div>
         
             <div className="input-group">
-              <input type="email" placeholder="Email address" required  name="admin" value={admin} onChange={(e)=>{setAdmin(e.target.value)}} />
+              <input type="email" placeholder="Enter your Id" required  name="userid" value={userid} onChange={(e)=>{setUserId(e.target.value)}} />
             </div>
             <div className="input-group">
               <input type="password" placeholder="Password" required  name="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} />

@@ -8,7 +8,7 @@ body {
 /* Main Navbar */
   .main-navbar {
     width: 100%;
-    display: flex;
+   
     justify-content: space-between;
     align-items: center;
     background-color: #008070; 

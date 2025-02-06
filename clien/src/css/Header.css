@@ -14,14 +14,20 @@
     color: white;
   }
   
-  .social-icons a {
+  .social-icons  {
     color: white;
     margin-left: 10px;
     font-size: 18px;
     text-decoration: none;
+    gap: 20px;
   }
   
-  .social-icons a:hover {
+  .social-icons :hover {
     color: #ffcc00; /* Highlight color on hover */
   }
-  
+
+  @media (max-width: 768px) {
+    .social-icons {
+      display: none;
+    }
+  }

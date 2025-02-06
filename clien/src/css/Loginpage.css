@@ -200,6 +200,8 @@
       .login-wrapper {
         display: block;
         padding: 20px;
+       width: 100%;
+        margin-left: 10px;
       }
       .login-left, .login-right {
         width: 100%;
