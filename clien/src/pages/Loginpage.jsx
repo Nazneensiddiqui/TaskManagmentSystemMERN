@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/LoginPage.css";
+import "../css/Loginpage.css";
 import log from "../images/draw2.webp";
 import { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
