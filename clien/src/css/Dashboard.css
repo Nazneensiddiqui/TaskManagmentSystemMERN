@@ -47,7 +47,7 @@
     overflow-y: auto;
    width: 100%; 
      padding: 10px; 
-     background-image: url('../images//bg3.jpg'); 
+    
      background-size: cover;  /* Ye image ko poore screen par fit karta hai */
      background-position: center;  /* Ye image ko center me place karta hai */
      background-repeat: no-repeat;
