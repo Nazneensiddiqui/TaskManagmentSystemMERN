@@ -1,8 +1,10 @@
-.app-container {
+ .app-container {
     display: flex;
     height: 100vh;
     flex-direction: column;
   }
+
+   
   
   .navbar {
     z-index: 10;
@@ -32,31 +34,31 @@
     margin-left: 230px;
     padding: 20px 20px 20px 20px;
     background-color: #f7e8c1 ;
-    height: 100vh;
-    /* overflow-y: auto; */
+    height: 100vh; 
+    overflow-y: auto; 
   }
   
-  /* .content-area {
+   .content-area {
     margin-bottom: 80px;
-  } */
+  } 
   
-  .scrollable-content {
+   .scrollable-content {
     height: 500px;
     overflow-y: auto;
-   width: 100%;
-    /* padding: 10px; */
-    /* background-image: url('../images//bg3.jpg'); */
-    background-size: cover;  /* Ye image ko poore screen par fit karta hai */
-    background-position: center;  /* Ye image ko center me place karta hai */
-    background-repeat: no-repeat;
+   width: 100%; 
+     padding: 10px; 
+     background-image: url('../images//bg3.jpg'); 
+     background-size: cover;  /* Ye image ko poore screen par fit karta hai */
+     background-position: center;  /* Ye image ko center me place karta hai */
+     background-repeat: no-repeat;
    
     
   }
-  
+   
   @media (max-width: 768px) {
     .sidebar {
-      position: relative;
-      /* height: auto; */
+      position: relative; 
+       height: auto; 
       padding-top: 20px;
       display: none;
     }
@@ -64,4 +66,6 @@
     .content {
       margin-left: 0;
     }
-  }
+  } 
+
+ 

@@ -40,20 +40,20 @@ const ResetPass=()=>{
         <>
       <div className="modal show"  style={{ display: 'block', position: 'initial' }} >
       <Modal.Dialog >
-        <Modal.Header closeButton style={{backgroundColor:" #f7e8c1"}}>
-          <Modal.Title align="center" style={{ color:"#6b4b3a",backgroundColor:" #f7e8c1"}}>Reset Password</Modal.Title>
+        <Modal.Header closeButton style={{backgroundColor:"#005f4f"}}>
+          <Modal.Title align="center" style={{ color:"#f7e8c1",backgroundColor:"#005f4f"}}>Reset Password</Modal.Title>
         </Modal.Header>
 
-        <Modal.Body align="center" style={{ color:"#6b4b3a",backgroundColor:" #f7e8c1"}}>
+        <Modal.Body align="center" style={{ color:"#f7e8c1",backgroundColor:"#005f4f"}}>
         Enter Prvious Password : <input type="password" name='oldpassword' value={input.oldpassword} onChange={handleInput} style={{borderRadius:"5px"}}/>
         <br/><br/>
         Enter New Password : <input type="password"  name='newpassword' value={input.newpassword} onChange={handleInput} style={{borderRadius:"5px"}}/>
         <br/>
          </Modal.Body>  
 
-        <Modal.Footer style={{backgroundColor:" #f7e8c1"}}>
+        <Modal.Footer style={{backgroundColor:"#005f4f"}}>
           
-          <Button variant="primary" style={{backgroundColor:"#6b4b3a"}} onClick={handleSubmit}>Save changes</Button>
+          <Button variant="primary" style={{backgroundColor:" #f7e8c1",color:"#005f4f"}} onClick={handleSubmit}>Save changes</Button>
         </Modal.Footer>
       </Modal.Dialog>
     </div>

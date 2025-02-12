@@ -4,12 +4,13 @@
     justify-content: space-around;
     align-items: center;
     background-color: #005f4f; /* Dark green color */
-    padding: 5px 20px;
+     padding: 5px 20px;
     font-size: 14px;
    
   }
-  
-  .contact-info span {
+
+
+   .contact-info span {
     margin-right: 20px;
     color: white;
   }
@@ -21,13 +22,50 @@
     text-decoration: none;
     gap: 20px;
   }
-  
+
   .social-icons :hover {
-    color: #ffcc00; /* Highlight color on hover */
+     color: #ffcc00;  
   }
 
-  @media (max-width: 768px) {
-    .social-icons {
-      display: none;
-    }
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
   }
+
+  .contact-info {
+    margin-bottom: 8px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .contact-info span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+}
+
+
+   
