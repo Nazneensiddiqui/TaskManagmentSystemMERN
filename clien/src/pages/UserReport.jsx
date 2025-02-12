@@ -13,7 +13,7 @@ const UserReport=()=>{
     const [mydata, setMydata]=useState([])
 
     const loadData=async()=>{
-        let api="http://localhost:8000/admin/userreport"
+        let api="https://taskmanagmentsystemmern-1.onrender.com/admin/userreport"
         try {
             const response= await axios.get(api);
             console.log(response.data)
@@ -27,7 +27,7 @@ const UserReport=()=>{
         },[])
 
 const  ReAssignTask=async(taskid)=>{
-    let api="http://localhost:8000/admin/reassignreport"
+    let api="https://taskmanagmentsystemmern-1.onrender.com/admin/reassignreport"
     try {
         const response= await axios.post(api,{taskid:taskid});
        console.log(response.data)

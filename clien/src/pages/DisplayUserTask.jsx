@@ -14,7 +14,7 @@ const DisplayUserTask=()=>{
 
     const loadData=async()=>{
 try {
-    let api="http://localhost:8000/employee/empdisplaytask"
+    let api="https://taskmanagmentsystemmern-1.onrender.com/employee/empdisplaytask"
     const response= await axios.post(api , {empid:empid})
     setMydata(response.data)
     console.log(response.data)
@@ -30,7 +30,7 @@ try {
 
  const taskSubmit=async(taskid)=>{
     try {
-        let api="http://localhost:8000/employee/emptasksubmit"  
+        let api="hhttps://taskmanagmentsystemmern-1.onrender.com/employee/emptasksubmit"  
         const response= await axios.post(api, {taskid:taskid, taskStatus:taskStatus})
         console.log(response.data)
         message.success(response.data.msg)

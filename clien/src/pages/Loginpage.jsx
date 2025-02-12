@@ -24,7 +24,7 @@ const handleSubmit=async()=>{
 if(userType=="admin")
 {
   try {
-    let api="http://localhost:8000/admin/adminlogin";
+    let api="hhttps://taskmanagmentsystemmern-1.onrender.com/admin/adminlogin";
     const response= await axios.post(api , {userid:userid, password:password})
     console.log(response.data)
 
@@ -44,7 +44,7 @@ if(userType=="admin")
 else if(userType=="employee")
 {
 try {
-  let api="http://localhost:8000/employee/employeelogin";
+  let api="hhttps://taskmanagmentsystemmern-1.onrender.com/employee/employeelogin";
   const response= await axios.post(api , {userid:userid, password:password})
   console.log(response.data)
   if(response.status==200)

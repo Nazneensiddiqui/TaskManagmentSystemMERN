@@ -24,7 +24,7 @@ const AssignTask=()=>{
      } 
   
     const handleSaveTask =async () => {
-    let api="http://localhost:8000/admin/savetask"
+    let api="hhttps://taskmanagmentsystemmern-1.onrender.com/admin/savetask"
     try {
        const response= await axios.post(api , {empid: empid, taskTitle:taskTitle , description:description,completionDays:completionDays }) 
        console.log(response.data)
@@ -36,7 +36,7 @@ const AssignTask=()=>{
     
     //.................................table................................................................
     const loadData=async()=>{
-    let api="http://localhost:8000/admin/assigntaskDisplay"
+    let api="https://taskmanagmentsystemmern-1.onrender.com/admin/assigntaskDisplay"
 try {
     const response= await axios.get(api);
     console.log(response.data)

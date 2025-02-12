@@ -23,7 +23,7 @@ const ResetPass=()=>{
     }
     
     const handleSubmit=async()=>{
-      let api="http://localhost:9000/users/resetpass";
+      let api="hhttps://taskmanagmentsystemmern-1.onrender.com/users/resetpass";
     
     try {
       const res= await axios.post(api , {userid:userid, ...input})
